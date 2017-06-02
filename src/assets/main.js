@@ -57,7 +57,7 @@ function getResults(input) {
   let correct = 0
   let output = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">' + '<div>'
   for(var i=0, len=input.length; i<len; i++) {
-    if(input[i]===answer[i]) {
+    if(input[i]===answer.value[i]) {
       output += '<span class="glyphicon glyphicon-ok"></span>'
       correct++
     }
