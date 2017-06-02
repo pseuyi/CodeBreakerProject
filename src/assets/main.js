@@ -39,8 +39,8 @@ function setHiddenFields() {
   }
 }
 
-function setMessage(message) {
-  message.innerHTML = message;
+function setMessage(input) {
+  message.innerHTML = input;
 }
 
 function validateInput (input) {
