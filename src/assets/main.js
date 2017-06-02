@@ -61,7 +61,7 @@ function getResults(input) {
       output += '<span class="glyphicon glyphicon-ok"></span>'
       correct++
     }
-    else if(answer.indexOf(input[i])>0) {
+    else if(answer.indexOf(input[i])>=0) {
       output += '<span class="glyphicon glyphicon-transfer"></span>'
     }
     else {
