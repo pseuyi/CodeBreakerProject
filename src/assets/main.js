@@ -14,7 +14,7 @@ function guess() {
       return false;
     }
     else {
-      attempt++;
+      attempt.value++;
     }
     if(getResults(input)) {
       setMessage("You Win! :)")
@@ -61,7 +61,7 @@ function getResults(input) {
       output += '<span class="glyphicon glyphicon-ok"></span>'
       correct++
     }
-    else if(answer.indexOf(input[i])>=0) {
+    else if(answer.value.indexOf(input[i])>=0) {
       output += '<span class="glyphicon glyphicon-transfer"></span>'
     }
     else {
