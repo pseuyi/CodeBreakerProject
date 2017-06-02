@@ -1,13 +1,13 @@
 let answer = document.getElementById('answer');
 let attempt = document.getElementById('attempt');
-let label = document.getElementById('message');
+let message = document.getElementById('message');
 let results = document.getElementById('results');
 let code = document.getElementById('code');
 
 function guess() {
     let input = document.getElementById('user-guess');
     //add functionality to guess function here
-    if(answer==='' && attempt === '') {
+    if(answer.value ==='' && attempt.value === '') {
       setHiddenFields();
     }
     if(!validateInput(input.value)) {
@@ -32,15 +32,15 @@ function guess() {
 }
 
 function setHiddenFields() {
-  attempt = 0;
-  answer = Math.floor(Math.random()*9999).toString();
+  attempt.value = 0;
+  answer.value = Math.floor(Math.random()*9999).toString();
   while (answer.length<4) {
-    answer = '0' + answer;
+    answer.value = '0' + answer.value;
   }
 }
 
 function setMessage(message) {
-  label.innerHTML = message;
+  message.innerHTML = message;
 }
 
 function validateInput (input) {
@@ -48,7 +48,7 @@ function validateInput (input) {
     return true;
   }
   else {
-    setMessage('Guesses must be exactly 4 characters long');
+    setMessage('Guesses must be exactly 4 characters long.');
     return false;
   }
 }
